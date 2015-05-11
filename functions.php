@@ -192,6 +192,13 @@ function bearded_theme_setup() {
 
 	add_action('init', 'bearded_setup_admin_bar');
 
+	wp_deregister_style('gallery');
+
+	add_filter('print_styles_array', function ($styles)
+	{
+
+		return $styles;
+	});
 }
 
 
