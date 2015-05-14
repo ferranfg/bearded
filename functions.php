@@ -216,7 +216,7 @@ function bearded_image_size() {
 	set_post_thumbnail_size( 575, 350, true);
 	add_image_size( 'featured-slider', 1160, 480, true);
 	add_image_size( 'featured-slider-content',530,480,true);
-	add_image_size( 'home-thumbnail',300,300);
+	add_image_size( 'home-thumbnail',260,260,true);
 	add_image_size( 'portfolio-thumbnail',500,500);
 }
 
