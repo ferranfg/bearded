@@ -192,7 +192,10 @@ function bearded_theme_setup() {
 
 	add_action('init', 'bearded_setup_admin_bar');
 
-	wp_deregister_style('gallery');
+	add_action('wp_enqueue_scripts', function ()
+	{
+		wp_deregister_style('gallery');
+	});
 
 	add_filter('print_styles_array', function ($styles)
 	{
@@ -419,6 +422,7 @@ function bearded_get_social_lists() {
 		'google-plus' => esc_url( hybrid_get_setting('bearded_social_google-plus') ),
 		'tumblr' => esc_url( hybrid_get_setting('bearded_social_tumblr') ),
 		'linkedin' => esc_url( hybrid_get_setting('bearded_social_linkedin') ),
+		'skype' => hybrid_get_setting('bearded_social_skype'),
 	);
 
 	return $social_lists;
